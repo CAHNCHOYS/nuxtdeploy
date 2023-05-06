@@ -2,7 +2,6 @@ import jwt from "jsonwebtoken";
 
 export default eventHandler(async (event) => {
   const body = await readBody(event);
-  const query = getQuery(event);
 
   // console.log(event.context.auth);
   console.log(body);
