@@ -1,4 +1,4 @@
-export default eventHandler(async (event) => {
+export default defineEventHandler(async (event) => {
 
   
    console.log("method called");
