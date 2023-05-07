@@ -14,15 +14,16 @@ const makeCall = async () => {
       method: "POST",
       body: { id: 20 },
     });
+    console.log(data);
   } catch (error) {
     console.log(error);
   }
 };
 const makeCall2 = async () => {
   try {
-    const data = await $fetch("/api/pic", {
+    const data = await $fetch("https://nuxtdeploy-five.vercel.app/api/pic", {
       method: "POST",
-      body: JSON.stringify({ id: "alex" }),
+      body: { id: "alex" },
     });
     console.log(data, "call2");
   } catch (error) {
@@ -32,7 +33,7 @@ const makeCall2 = async () => {
 
 const makeCall3 = async () => {
   try {
-    const data = await $fetch("/api/getData", {
+    const data = await $fetch("http://localhost:5000/api/getData", {
       method: "GET",
     });
     console.log(data, "call2");
