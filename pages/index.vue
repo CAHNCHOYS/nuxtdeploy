@@ -3,7 +3,8 @@
   <p>
     <v-btn variant="flat" color="pink" @click="makeCall">Make Call</v-btn>
     <v-btn variant="flat" color="pink" @click="makeCall2">Make Call2</v-btn>
-    <v-btn variant="flat" color="pink" @click="makeCall3">Make Call3</v-btn>
+    <v-btn variant="flat" color="black" @click="makeCall3">Make Call3</v-btn>
+    <v-btn variant="flat" color="red" @click="makeCall4">Make Call4</v-btn>
   </p>
 </template>
 
@@ -21,11 +22,12 @@ const makeCall = async () => {
 };
 const makeCall2 = async () => {
   try {
-    const { data } = await useFetch("/api/pic", {
+    const data = await $fetch("/api/pic", {
       method: "post",
       body: { id: 2 },
     });
-    console.log(data.value);
+   
+    console.log(data, "/api/pic");
   } catch (error) {
     console.log(error);
   }
@@ -33,8 +35,21 @@ const makeCall2 = async () => {
 
 const makeCall3 = async () => {
   try {
-    const { data } = await useFetch("/api/getData");
-    console.log(data.value);
+    const data = await $fetch("/api/getData");
+    console.log("get Data",data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+const makeCall4 = async () => {
+  try {
+    const data = await $fetch("https://test-nuxt-mu-five.vercel.app/auth/login", {
+      method: "post",
+      body: {email: "123@mail.ru", password: 20}
+    });
+    console.log("Post",data);
   } catch (error) {
     console.log(error);
   }
