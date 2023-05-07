@@ -10,7 +10,7 @@ definePageMeta({
   title: "my TItle",
 });
 
-const {data, error} = useFetch('/api/fromTop', {
+const {data, error} = await useFetch('/api/fromTop', {
   method: "POST",
   body: {id: 44, name: "Alex"},
 })
