@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
     console.log(body);
 
 
-    return "Hi";
+    return "Hi from data";
 
     
   });

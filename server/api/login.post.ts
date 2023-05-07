@@ -11,10 +11,10 @@ export default eventHandler(async (event) => {
     expiresIn: "2h",
   });
 
-  setCookie(event, "token", token, {
-    maxAge: 24 * 3600 * 1000,
-    httpOnly: true,
-  });
+  // setCookie(event, "token", token, {
+  //   maxAge: 24 * 3600 * 1000,
+  //   httpOnly: true,
+  // });
 
   return {
     data: "getted",

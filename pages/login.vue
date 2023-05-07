@@ -73,7 +73,7 @@ const loginSubmit = async () => {
 
   try {
     const data = await $fetch("/api/login", {
-      method: "POST",
+      method: "post",
       body: { ...form.value },
     });
     globalStore.isUserLoggedIn = true;
