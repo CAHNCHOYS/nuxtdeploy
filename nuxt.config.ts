@@ -33,6 +33,9 @@ export default defineNuxtConfig({
     _config: {
       preset: 'vercel'
     }
+  },
+  routeRules: {
+    '/api/**' : {cache: false, swr: false}
   }
 
 });
