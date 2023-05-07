@@ -7,6 +7,6 @@ export default eventHandler(async (event) => {
   
     
 
-    return {...body};
+    return {data: "getted"};
   });
   

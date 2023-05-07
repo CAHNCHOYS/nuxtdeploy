@@ -5,6 +5,8 @@ export default eventHandler(async (event) => {
   
 
 
-    return "Data from getData get Method";
+    return {
+        api: "Works",
+    };
   });
   

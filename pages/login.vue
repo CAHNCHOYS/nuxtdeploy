@@ -74,7 +74,7 @@ const loginSubmit = async () => {
   try {
     const data = await $fetch("/api/login", {
       method: "post",
-      body: { ...form.value },
+      body: JSON.stringify({email: "Alex", password: "1234"}),
     });
     globalStore.isUserLoggedIn = true;
     console.log(data);
