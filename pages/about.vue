@@ -12,6 +12,11 @@
     <v-btn variant="flat" height="50" color="yellow" class="text-white" @click="makeCall3"
       >get test</v-btn
     >
+
+    <v-btn variant="flat" height="50" color="blue" class="text-white" @click="makeCall4"
+      >get car</v-btn
+    >
+
     <AboutInfo />
 
     <v-sheet border="lg" color="pink" class="pa-5">
@@ -60,7 +65,18 @@ const makeCall3 = async () => {
   }
 };
 
+const makeCall4 = async () => {
+  try {
+    const data = await $fetch("/car", {
+       method:"get",
+    });
+    console.log(data, "test")
+   
 
+  } catch (error) {
+    console.log(error, "error happened");
+  }
+};
 
 
 

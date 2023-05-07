@@ -21,6 +21,16 @@ if(error.value){
   console.log(data.value, "data");
 }
 
+const {data: myData, error: myError} = await useFetch('/car', {
+  method: "get",
+})
+
+if(myError.value){
+  console.log(myError.value, "error");
+}else {
+  console.log( myData.value, "data");
+}
+
 
 </script>
 
