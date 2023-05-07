@@ -1,0 +1,1 @@
+import{f as e,o as t,a as o,e as s}from"./entry.babb6ee8.js";const a=s("h3",null,"This is protected Page",-1),n=[a],d=e({__name:"protected",setup(c){return(r,_)=>(t(),o("div",null,n))}});export{d as default};

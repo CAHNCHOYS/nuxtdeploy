@@ -1,0 +1,1 @@
+import{_ as t}from"./_plugin-vue_export-helper.c27b6911.js";import{c as a,w as n,j as s,o as r,D as c,e as _}from"./entry.babb6ee8.js";const l={},u=_("p",null," Auth laayout ",-1);function f(e,m){const o=s("v-main");return r(),a(o,null,{default:n(()=>[u,c(e.$slots,"default")]),_:3})}const p=t(l,[["render",f]]);export{p as default};
