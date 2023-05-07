@@ -35,8 +35,13 @@ const makeCall2 = async () => {
 
 const makeCall3 = async () => {
   try {
-    const data = await $fetch("/api/getData");
-    console.log("get Data",data);
+    const {data, error} = await useFetch("/api/getData");
+    if(!error.value) {
+      console.log("get Data",data.value);
+    }else {
+      console.log("error", error.value);
+    }
+  
   } catch (error) {
     console.log(error);
   }
