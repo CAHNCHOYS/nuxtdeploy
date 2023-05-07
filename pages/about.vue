@@ -41,6 +41,15 @@
       >get OTher backend</v-btn
     >
 
+    <v-btn
+      variant="flat"
+      height="50"
+      color="red"
+      class="text-white"
+      @click="makeCall6"
+      >Patch data</v-btn
+    >
+
     <AboutInfo />
 
     <v-sheet border="lg" color="pink" class="pa-5">
@@ -105,6 +114,22 @@ const makeCall5 = async () => {
     console.log(error, "error happened");
   }
 };
+
+
+const makeCall6 = async () => {
+  try {
+    const data = await $fetch("/api/tryPatch", {
+      method: "PATCH",
+    });
+    console.log(data, "PAtch method");
+  } catch (error) {
+    console.log(error, "error happened");
+  }
+};
+
+
+
+
 </script>
 
 <style scoped>
