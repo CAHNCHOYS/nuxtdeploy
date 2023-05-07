@@ -2,7 +2,6 @@
 
 export default defineNuxtConfig({
   ssr: true,
-  serverDir: './',
   alias: {
     pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
   },
@@ -30,6 +29,10 @@ export default defineNuxtConfig({
       title: "Learn Nuxt",
     },
   },
-
+  nitro: {
+    _config: {
+      preset: 'vercel'
+    }
+  }
 
 });
