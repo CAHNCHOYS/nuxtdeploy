@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     _config: {
-      preset: 'vercel-edge'
+      preset: 'vercel'
     }
   }
 
