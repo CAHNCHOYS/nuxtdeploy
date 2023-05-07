@@ -5,6 +5,13 @@
     <v-btn variant="flat" height="50" color="orange" class="text-white"
       >I am button</v-btn
     >
+
+    <v-btn variant="flat" height="50" color="green" class="text-white" @click="makeCall2"
+      >Pic POST</v-btn
+    >
+    <v-btn variant="flat" height="50" color="yellow" class="text-white" @click="makeCall3"
+      >get test</v-btn
+    >
     <AboutInfo />
 
     <v-sheet border="lg" color="pink" class="pa-5">
@@ -24,6 +31,39 @@
 
 <script setup lang="ts">
 const { count, addOne } = useCount();
+
+
+const makeCall2 = async () => {
+  try {
+    const data = await $fetch("/api/pic", {
+      method: "post",
+      body: { id: 2 },
+    });
+    console.log(data, "data-about")
+   
+
+  } catch (error) {
+    console.log(error, "error happened");
+  }
+};
+
+const makeCall3 = async () => {
+  try {
+    const data = await $fetch("/api/test", {
+       method:"get",
+    });
+    console.log(data, "test")
+   
+
+  } catch (error) {
+    console.log(error, "error happened");
+  }
+};
+
+
+
+
+
 </script>
 
 <style scoped>
