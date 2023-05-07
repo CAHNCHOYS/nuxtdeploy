@@ -9,6 +9,17 @@
 </template>
 
 <script setup lang="ts">
+
+
+
+const {data, error} = await useFetch("/api/getData");
+    if(!error.value) {
+      console.log("get Data json top",data.value);
+    }else {
+      console.log("error top", error.value);
+    }
+
+
 const makeCall = async () => {
   try {
     const data = await $fetch("/api/auth/errorg", {
@@ -27,7 +38,7 @@ const makeCall2 = async () => {
       body: { id: 2 },
     });
     if(!error.value){
-      console.log(data, "/api/pic");
+      console.log(data.value, "/api/pic");
     }else {
       console.log("error", error.value);
     }
