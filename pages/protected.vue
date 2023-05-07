@@ -15,10 +15,10 @@ const {data, error} = await useFetch('/api/fromTop', {
   body: {id: 44, name: "Alex"},
 })
 
-if(error){
-  console.log(error.value);
+if(error.value){
+  console.log(error.value, "error");
 }else {
-  console.log(data.value);
+  console.log(data.value, "data");
 }
 
 
