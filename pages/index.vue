@@ -2,6 +2,7 @@
   <div>I am home page</div>
   <p>
     <v-btn variant="flat" color="pink" @click="makeCall">Make Call</v-btn>
+    <v-btn variant="flat" color="pink" @click="makeCall2">Make Call2</v-btn>
   </p>
 </template>
 
@@ -17,7 +18,18 @@ const makeCall = async () => {
     console.log(error);
   }
 };
+const makeCall2 = async () => {
+  try {
+    const data = await $fetch("/api/pic", {
+      method: "POST",
+      body: JSON.stringify({id: "alex"}),
+    });
+    console.log(data, "call2");
 
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 
 </script>
