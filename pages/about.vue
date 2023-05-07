@@ -6,15 +6,39 @@
       >I am button</v-btn
     >
 
-    <v-btn variant="flat" height="50" color="green" class="text-white" @click="makeCall2"
+    <v-btn
+      variant="flat"
+      height="50"
+      color="green"
+      class="text-white"
+      @click="makeCall2"
       >Pic POST</v-btn
     >
-    <v-btn variant="flat" height="50" color="yellow" class="text-white" @click="makeCall3"
+    <v-btn
+      variant="flat"
+      height="50"
+      color="yellow"
+      class="text-white"
+      @click="makeCall3"
       >get test</v-btn
     >
 
-    <v-btn variant="flat" height="50" color="blue" class="text-white" @click="makeCall4"
+    <v-btn
+      variant="flat"
+      height="50"
+      color="blue"
+      class="text-white"
+      @click="makeCall4"
       >get car</v-btn
+    >
+
+    <v-btn
+      variant="flat"
+      height="50"
+      color="red"
+      class="text-white"
+      @click="makeCall5"
+      >get OTher backend</v-btn
     >
 
     <AboutInfo />
@@ -37,16 +61,13 @@
 <script setup lang="ts">
 const { count, addOne } = useCount();
 
-
 const makeCall2 = async () => {
   try {
     const data = await $fetch("/api/pic", {
       method: "post",
       body: { id: 2 },
     });
-    console.log(data, "data-about")
-   
-
+    console.log(data, "data-about");
   } catch (error) {
     console.log(error, "error happened");
   }
@@ -55,11 +76,9 @@ const makeCall2 = async () => {
 const makeCall3 = async () => {
   try {
     const data = await $fetch("/api/test", {
-       method:"get",
+      method: "get",
     });
-    console.log(data, "test")
-   
-
+    console.log(data, "test");
   } catch (error) {
     console.log(error, "error happened");
   }
@@ -68,18 +87,24 @@ const makeCall3 = async () => {
 const makeCall4 = async () => {
   try {
     const data = await $fetch("/car", {
-       method:"get",
+      method: "get",
     });
-    console.log(data, "test")
-   
-
+    console.log(data, "test");
   } catch (error) {
     console.log(error, "error happened");
   }
 };
 
-
-
+const makeCall5 = async () => {
+  try {
+    const data = await $fetch("https://test-nuxt-mu-five.vercel.app", {
+      method: "get",
+    });
+    console.log(data, "vercel backend");
+  } catch (error) {
+    console.log(error, "error happened");
+  }
+};
 </script>
 
 <style scoped>

@@ -1,8 +1,10 @@
-import { eventHandler } from 'h3';
+import { defineEventHandler } from 'h3';
 
-const getData_get = eventHandler(async (event) => {
+const getData_get = defineEventHandler(async (event) => {
   console.log("method called");
-  return "Data from getData get Method";
+  return {
+    api: "Works"
+  };
 });
 
 export { getData_get as default };

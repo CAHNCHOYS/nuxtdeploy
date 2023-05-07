@@ -1,9 +1,9 @@
-import { eventHandler, readBody } from 'h3';
+import { defineEventHandler, readBody } from 'h3';
 
-const pic_post = eventHandler(async (event) => {
+const pic_post = defineEventHandler(async (event) => {
   const body = await readBody(event);
   console.log(body);
-  return "Data from Post Method";
+  return { ...body };
 });
 
 export { pic_post as default };

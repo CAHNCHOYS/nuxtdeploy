@@ -1,4 +1,4 @@
-import { getCurrentInstance as getCurrentInstance$1, version as version$1, inject as inject$1, createVNode, mergeProps, toRefs, Transition, ref, computed, watch, nextTick, toRef, Text, watchEffect, provide, onScopeDispose, withDirectives, resolveDirective, vShow, Fragment as Fragment$1, reactive, capitalize, h, onUpdated, useSSRContext, unref, defineComponent as defineComponent$1, camelize, toRaw, isRef, readonly, TransitionGroup, resolveDynamicComponent, cloneVNode, effectScope, warn, toHandlers, Teleport, createTextVNode, vModelText, resolveComponent, withCtx, createApp, shallowRef, markRaw, isReactive, Suspense, onErrorCaptured, onServerPrefetch, getCurrentScope, isReadonly, defineAsyncComponent } from 'vue';
+import { getCurrentInstance as getCurrentInstance$1, version as version$1, inject as inject$1, unref, computed, reactive, createVNode, mergeProps, toRefs, Transition, ref, watch, nextTick, toRef, Text, watchEffect, provide, onScopeDispose, withDirectives, resolveDirective, vShow, Fragment as Fragment$1, capitalize, h, onUpdated, useSSRContext, onServerPrefetch, defineComponent as defineComponent$1, camelize, toRaw, isRef, readonly, TransitionGroup, resolveDynamicComponent, cloneVNode, effectScope, warn, toHandlers, Teleport, createTextVNode, vModelText, resolveComponent, withCtx, createApp, shallowRef, markRaw, isReactive, Suspense, onErrorCaptured, getCurrentScope, isReadonly, defineAsyncComponent } from 'vue';
 import { $fetch } from 'ofetch';
 import { createHooks } from 'hookable';
 import { getContext, executeAsync } from 'unctx';
@@ -986,7 +986,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./about-9ec4231f.mjs').then((m) => m.default || m)
+    component: () => import('./about-135255bb.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -994,7 +994,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./index-63d56c45.mjs').then((m) => m.default || m)
+    component: () => import('./index-675bc966.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.name) ?? "login",
@@ -1002,7 +1002,7 @@ const _routes = [
     meta: __nuxt_page_meta$1 || {},
     alias: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.alias) || [],
     redirect: (__nuxt_page_meta$1 == null ? void 0 : __nuxt_page_meta$1.redirect) || void 0,
-    component: () => import('./login-f0ef5671.mjs').then((m) => m.default || m)
+    component: () => import('./login-5ced78ce.mjs').then((m) => m.default || m)
   },
   {
     name: "posts",
@@ -1010,7 +1010,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./posts-0b82ca94.mjs').then((m) => m.default || m)
+    component: () => import('./posts-8ee910c4.mjs').then((m) => m.default || m)
   },
   {
     name: "profiles-id",
@@ -1018,7 +1018,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_id_-a8be44fe.mjs').then((m) => m.default || m)
+    component: () => import('./_id_-6d67cdfd.mjs').then((m) => m.default || m)
   },
   {
     name: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.name) ?? "protected",
@@ -1026,7 +1026,7 @@ const _routes = [
     meta: __nuxt_page_meta || {},
     alias: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.alias) || [],
     redirect: (__nuxt_page_meta == null ? void 0 : __nuxt_page_meta.redirect) || void 0,
-    component: () => import('./protected-f7d6837f.mjs').then((m) => m.default || m)
+    component: () => import('./protected-0079618a.mjs').then((m) => m.default || m)
   }
 ];
 const routerOptions0 = {
@@ -1144,7 +1144,7 @@ const globalMiddleware = [
   auth_45global
 ];
 const namedMiddleware = {
-  login: () => import('./login-94ded2dd.mjs')
+  login: () => import('./login-6088a5b1.mjs')
 };
 const router_jmwsqit4Rs = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:router",
@@ -19848,7 +19848,7 @@ const _wrapIf = (component, props, slots) => {
 };
 const layouts = {
   auth: () => import('./auth-189074c3.mjs').then((m) => m.default || m),
-  default: () => import('./default-74bb5a3b.mjs').then((m) => m.default || m)
+  default: () => import('./default-2d71fd0d.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = /* @__PURE__ */ defineComponent$1({
   name: "LayoutLoader",
@@ -20045,7 +20045,7 @@ const _sfc_main = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = /* @__PURE__ */ defineAsyncComponent(() => import('./error-component-b89320b5.mjs').then((r) => r.default || r));
+    const ErrorComponent = /* @__PURE__ */ defineAsyncComponent(() => import('./error-component-89a7fb29.mjs').then((r) => r.default || r));
     const IslandRenderer = /* @__PURE__ */ defineAsyncComponent(() => import('./island-renderer-4d1692dc.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     nuxtApp.deferHydration();
@@ -20111,5 +20111,5 @@ const plugins = normalizePlugins(_plugins);
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { useNuxtApp as a, useRoute as b, createError as c, defineNuxtRouteMiddleware as d, entry$1 as default, useRouter$1 as e, useHead as f, navigateTo as n, useGlobalStore as u };
+export { useGlobalStore as a, useNuxtApp as b, createError as c, useRoute as d, entry$1 as default, defineNuxtRouteMiddleware as e, useRouter$1 as f, useHead as g, navigateTo as n, useFetch as u };
 //# sourceMappingURL=server.mjs.map
