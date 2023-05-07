@@ -34,4 +34,8 @@ export default defineNuxtConfig({
       title: "Learn Nuxt",
     },
   },
+
+  nitro: {
+    preset: 'node-server'
+  }
 });
