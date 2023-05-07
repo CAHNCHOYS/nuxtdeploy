@@ -86,7 +86,7 @@ const makeCall3 = async () => {
 
 const makeCall4 = async () => {
   try {
-    const data = await $fetch("http://nuxtdeploy-five.vercel.app/about/car", {
+    const data = await $fetch("https://nuxtdeploy-five.vercel.app/about/car", {
       method: "get",
     });
     console.log(data, "test");
