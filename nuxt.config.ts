@@ -30,10 +30,6 @@ export default defineNuxtConfig({
       title: "Learn Nuxt",
     },
   },
-  nitro: {
-    _config: {
-      preset: 'vercel'
-    }
-  }
+
 
 });
